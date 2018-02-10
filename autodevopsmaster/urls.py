@@ -32,6 +32,7 @@ urlpatterns = [
     
     # pythondemo
     path('comp', python_views.comp),                                # Demo-001 : 获取请求参数
+    path('compd', python_views.compd),                              # Demo-002 : 设置请求参数默认值
     
     path('admin/', admin.site.urls),
 ]
