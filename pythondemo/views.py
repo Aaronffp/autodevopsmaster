@@ -35,3 +35,17 @@ def compd(request):
         msg = str(src) + ' < ' + str(tar)
     
     return HttpResponse(msg)
+
+# Demo-003 : RESTFUL API
+def compr(request, src, tar):
+    src = int(src)
+    tar = int(tar)
+    
+    if src > tar :
+        msg = str(src) + ' > ' + str(tar)
+    elif src == tar :
+        msg = str(src) + ' = ' + str(tar)
+    else:
+        msg = str(src) + ' < ' + str(tar)
+    
+    return HttpResponse(msg)
