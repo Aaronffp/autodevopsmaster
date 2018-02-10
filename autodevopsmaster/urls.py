@@ -24,9 +24,14 @@ from django.contrib import admin
 from django.urls import path
 
 from jenkinsapi import views as jenkinsapi_views
+from pythondemo import views as python_views
 
 urlpatterns = [
-    path('status', jenkinsapi_views.status),                        # 添加jenkinsapi服务状态接口路由规则
+    # jenkinsapi
+    path('status', jenkinsapi_views.status),                        # 添加服务状态接口路由规则
+    
+    # pythondemo
+    path('comp', python_views.comp),                                # Demo-001 : 获取请求参数
     
     path('admin/', admin.site.urls),
 ]
