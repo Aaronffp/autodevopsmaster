@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'autodevopsmaster.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+# 默认数据库sqlite
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
