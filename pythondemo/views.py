@@ -49,3 +49,10 @@ def compr(request, src, tar):
         msg = str(src) + ' < ' + str(tar)
     
     return HttpResponse(msg)
+
+# Demo-004 : 创建首页信息(使用模板)
+def home(request):
+    return render(request, 'home.html')
+
+
+

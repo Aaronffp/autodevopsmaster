@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    # 注册jenkinsapi应用服务
     'jenkinsapi',
+    
+    # 注册python演示实例服务
+    'pythondemo',
 ]
 
 MIDDLEWARE = [

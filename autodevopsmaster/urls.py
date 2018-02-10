@@ -34,6 +34,7 @@ urlpatterns = [
     path('comp', python_views.comp),                                # Demo-001 : 获取请求参数
     path('compd', python_views.compd),                              # Demo-002 : 设置请求参数默认值
     path('compr/<int:src>/<int:tar>/', python_views.compr),         # Demo-003 : RESTFUL API
+    path('home', python_views.home),                                # Demo-004 : 服务首页(使用模板)
     
     path('admin/', admin.site.urls),
 ]
