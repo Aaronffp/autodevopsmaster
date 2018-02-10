@@ -1,3 +1,10 @@
+# -*- coding:utf-8 -*-
+# 
+# File : jenkinsapi/views.py
+# Author : 范丰平
+
+from sys import path_hooks
+
 """autodevopsmaster URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,6 +23,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from jenkinsapi import views as jenkinsapi_views
+
 urlpatterns = [
+    path('status', jenkinsapi_views.status),                        # 添加jenkinsapi服务状态接口路由规则
+    
     path('admin/', admin.site.urls),
 ]
