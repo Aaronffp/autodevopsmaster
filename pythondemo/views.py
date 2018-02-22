@@ -54,5 +54,9 @@ def compr(request, src, tar):
 def home(request):
     return render(request, 'home.html')
 
+# Demo-005 : 首页模板参数传递01
+def argstrans(request):
+    msg = u'Demo-005 : 首页模板参数传递 --- 字符串实例'
+    return render(request, 'argstrans.html', {'msg' : msg})
 
 

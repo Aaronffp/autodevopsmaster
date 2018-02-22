@@ -24,17 +24,20 @@ from django.contrib import admin
 from django.urls import path
 
 from jenkinsapi import views as jenkinsapi_views
-from pythondemo import views as python_views
+from pythondemo import views as demo_views
 
 urlpatterns = [
     # jenkinsapi
-    path('status', jenkinsapi_views.status),                        # 添加服务状态接口路由规则
+    path('status', jenkinsapi_views.status),                           # 添加服务状态接口路由规则
     
     # pythondemo
-    path('comp', python_views.comp),                                # Demo-001 : 获取请求参数
-    path('compd', python_views.compd),                              # Demo-002 : 设置请求参数默认值
-    path('compr/<int:src>/<int:tar>/', python_views.compr),         # Demo-003 : RESTFUL API
-    path('home', python_views.home),                                # Demo-004 : 服务首页(使用模板)
+    path('demo/comp', demo_views.comp),                                # Demo-001 : 获取请求参数
+    path('demo/compd', demo_views.compd),                              # Demo-002 : 设置请求参数默认值
+    path('demo/compr/<int:src>/<int:tar>', demo_views.compr),          # Demo-003 : RESTFUL API
+    path('demo/home', demo_views.home),                                # Demo-004 : 服务首页(使用模板)
+    path('demo/argstrans', demo_views.argstrans),                      # Demo-005 : 模板参数传递实例（一） --- 字符串实例
     
     path('admin/', admin.site.urls),
 ]
+
+
