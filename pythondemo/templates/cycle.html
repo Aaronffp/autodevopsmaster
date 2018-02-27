@@ -25,6 +25,13 @@
             {{ item }} {% if not forloop.last %}, {% endif %}
             {% endfor %}
             </p>
+            <p>
+            {% for key, value in cycle.empty.items %}
+            &emsp;&emsp;{{key}}：{{value}}<br>
+            {% empty %}
+            &emsp;&emsp;列表为空
+            {% endfor %}
+            </p>
         </div>
     </body>
 </html>

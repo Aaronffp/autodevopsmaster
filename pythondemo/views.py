@@ -62,7 +62,9 @@ def argstrans(request):
 
 # Demo-006 : 循环遍历实例
 def cycle(request):
-    cycle = {"name":u"Demo-006 : 循环遍历实例", "capacity":["JAVA","PYTHON","SHELL","SQL","WEBDRIVER","API","CI"],"author":{"name":u"范丰平","blog":"http://www.cnblogs.com/fengpingfan/"}}
+    cycle = {"name":u"Demo-006 : 循环遍历实例", "capacity":["JAVA","PYTHON","SHELL","SQL"],
+             "author":{"name":u"范丰平","blog":"http://www.cnblogs.com/fengpingfan/"},
+             "empty":{}}
     return render(request, 'cycle.html', {'cycle':cycle})
 
 
