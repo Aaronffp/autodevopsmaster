@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ cycle.name }}</title>
+    </head>
+    
+    <body>
+        <div>
+            <p>&emsp;&emsp;作者信息：&emsp;{{ cycle.author }}</p>
+            <p>&emsp;&emsp;技能信息：&emsp;{{ cycle.capacity }}</p>
+            <br>
+            <p>&emsp;&emsp;作者信息：</p>
+            <p>&emsp;&emsp;姓名：{{ cycle.author.name }}</p>
+            <p>&emsp;&emsp;博客：{{ cycle.author.blog }}</p>
+            <br>
+            <p>&emsp;&emsp;author：</p>
+            <p>
+            {% for key, value in cycle.author.items %}
+            &emsp;&emsp;{{key}}：{{value}}<br>
+            {% endfor %}
+            </p>
+            <br>
+            <p>&emsp;&emsp;技能信息：
+            {% for item in cycle.capacity %}
+            {{ item }} {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        </div>
+    </body>
+</html>

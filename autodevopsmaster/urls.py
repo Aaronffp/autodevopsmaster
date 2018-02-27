@@ -36,6 +36,7 @@ urlpatterns = [
     path('demo/compr/<int:src>/<int:tar>', demo_views.compr),          # Demo-003 : RESTFUL API
     path('demo/home', demo_views.home),                                # Demo-004 : 服务首页(使用模板)
     path('demo/argstrans', demo_views.argstrans),                      # Demo-005 : 模板参数传递实例（一） --- 字符串实例
+    path('demo/cycle', demo_views.cycle),                              # Demo-006 : 循环遍历实例
     
     path('admin/', admin.site.urls),
 ]

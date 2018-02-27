@@ -5,6 +5,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.context_processors import request
 
 # Create your views here.
 
@@ -58,5 +59,10 @@ def home(request):
 def argstrans(request):
     msg = u'Demo-005 : 首页模板参数传递 --- 字符串实例'
     return render(request, 'argstrans.html', {'msg' : msg})
+
+# Demo-006 : 循环遍历实例
+def cycle(request):
+    cycle = {"name":u"Demo-006 : 循环遍历实例", "capacity":["JAVA","PYTHON","SHELL","SQL","WEBDRIVER","API","CI"],"author":{"name":u"范丰平","blog":"http://www.cnblogs.com/fengpingfan/"}}
+    return render(request, 'cycle.html', {'cycle':cycle})
 
 
